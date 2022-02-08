@@ -1,23 +1,25 @@
 *
 {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
 }
 html
 {
     font-size: 62.5%;
-    background-color: #f0ede6;
+    background-color: #55230c;
 }
 
 main
 {
-    max-width: 1200px;
     margin: 0 auto;
 }
 .logo
 {
     display: grid;
+    width: 100%;
     grid-template-columns: 2fr 3fr;
-    grid-auto-rows: 500px;
+    grid-auto-rows: 35rem;
     background: linear-gradient(to top, #ffe4c4 0%, #804000 100%);
     border-radius: 10px;
     border-bottom: 1px solid white;
@@ -33,23 +35,26 @@ main
 .header
 {
     align-self: center;
-    padding-left: 40px;
+    padding-left: 20%;
+    justify-self: center;
 }
 .header h1
 {
-    font-size: 3.5rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 6rem;
     font-weight: bold;
-    line-height: 5rem;
     color: #45290c;
     margin-bottom: 0px;
 }
 .header p
 {
+    font-family: 'Dancing Script', cursive;
     margin-top: 0px;
-    font-size: 2rem;
-    color: black;
-    margin-left: 8px;
+    font-size: 3rem;
+    font-weight: 400;
+    color: rgb(240, 223, 204);
     margin-bottom: 20px;
+    padding-left: 15%;
     
 }
 .header button
@@ -58,9 +63,14 @@ main
     border: none;
     background-color: #804000;
     color: white;
+    font-weight: bold;
     padding: 5px;
     border-radius: 15px;
-    margin-left: 35px;
+    margin-left: 30%;
+}
+.header button:hover
+{
+    background-color: #45290c;
 }
 .cakes
 {
@@ -68,7 +78,7 @@ main
 }
 .cakes-title
 {
-    color: #b48e64;
+    color: #ceb08d;
     font-weight: bold;
     text-align: center;
     margin-bottom: 50px;
@@ -88,8 +98,77 @@ main
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 .item-big {
     grid-area: 1 / 1 / 3 / 3;
+}
+.menu
+{
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 80%;
+}
+.menu h2
+{
+    font-size: 2rem;
+    color: #d4c3b8;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.menu-grid
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 20rem;
+    gap: 10px;
+}
+.menu-item 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+}
+.footer
+{
+    margin-top: 100px;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 2fr 3fr;
+    grid-auto-rows: 12rem;
+    background-color: #d4c3b8;
+}
+footer .contactos
+{
+    width: 100%;
+    height: 80%;
+    align-self: center;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.footer .contactos ul
+{
+    list-style: none;
+}
+.footer .contactos a
+{
+    color: #45290c;
+    text-decoration: none;
+    align-content: center;
+    font-size: 1.5rem;
+}
+.footer .contactos a:hover
+{
+    text-decoration: underline;
+}
+.footer .contactos img
+{
+    height: 8rem;
+    object-fit: contain;
+    align-self: center;
 }
