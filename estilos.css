@@ -1,0 +1,95 @@
+*
+{
+    font-family: 'Roboto', sans-serif;
+}
+html
+{
+    font-size: 62.5%;
+    background-color: #f0ede6;
+}
+
+main
+{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo
+{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-auto-rows: 500px;
+    background: linear-gradient(to top, #ffe4c4 0%, #804000 100%);
+    border-radius: 10px;
+    border-bottom: 1px solid white;
+
+}
+.logo-boccatta
+{
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+    align-self: center;
+}
+.header
+{
+    align-self: center;
+    padding-left: 40px;
+}
+.header h1
+{
+    font-size: 3.5rem;
+    font-weight: bold;
+    line-height: 5rem;
+    color: #45290c;
+    margin-bottom: 0px;
+}
+.header p
+{
+    margin-top: 0px;
+    font-size: 2rem;
+    color: black;
+    margin-left: 8px;
+    margin-bottom: 20px;
+    
+}
+.header button
+{
+    width: 150px;
+    border: none;
+    background-color: #804000;
+    color: white;
+    padding: 5px;
+    border-radius: 15px;
+    margin-left: 35px;
+}
+.cakes
+{
+    margin-top: 100px;
+}
+.cakes-title
+{
+    color: #b48e64;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+}
+.cakes-grid
+{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 250px));
+    grid-auto-rows: 0.5fr;
+    border-radius: 10px;
+    gap: 10px;
+    justify-content: center;
+}
+.cakes-item
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.item-big {
+    grid-area: 1 / 1 / 3 / 3;
+}
