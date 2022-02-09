@@ -125,7 +125,7 @@ main
 {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, 150px);
+    grid-template-columns: repeat(auto-fit, minmax(75px, 150px));
     grid-auto-rows: 20rem;
     gap: 10px;
 }
@@ -216,5 +216,9 @@ footer .contactos
     {
       
     grid-template-columns: repeat(auto-fit, minmax(75px, 150px));
+    }
+    .menu
+    {
+        width: 100%;
     }
 }
