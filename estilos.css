@@ -3,6 +3,7 @@
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 html
 {
@@ -18,11 +19,12 @@ main
 {
     display: grid;
     width: 100%;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: minmax(300px, 2fr) 3fr;
     grid-auto-rows: 35rem;
     background: linear-gradient(to top, #ffe4c4 0%, #804000 100%);
-    border-radius: 10px;
-    border-bottom: 1px solid white;
+    border-radius: 1rem;
+    border-bottom: 0.1rem solid white;
+    justify-content: center;
 
 }
 .logo-boccatta
@@ -45,6 +47,7 @@ main
     font-weight: bold;
     color: #45290c;
     margin-bottom: 0px;
+    text-align: center;
 }
 .header p
 {
@@ -71,6 +74,7 @@ main
 .header button:hover
 {
     background-color: #45290c;
+    text-decoration: underline;
 }
 .cakes
 {
@@ -87,7 +91,7 @@ main
 .cakes-grid
 {
     display: grid;
-    grid-template-columns: repeat(4, minmax(150px, 250px));
+    grid-template-columns: repeat(auto-fit, minmax(75px, 300px));
     grid-auto-rows: 0.5fr;
     border-radius: 10px;
     gap: 10px;
@@ -121,7 +125,7 @@ main
 {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, 150px);
     grid-auto-rows: 20rem;
     gap: 10px;
 }
@@ -171,4 +175,46 @@ footer .contactos
     height: 8rem;
     object-fit: contain;
     align-self: center;
+}
+@media screen and (max-width: 768px)
+{
+    .logo 
+    {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .logo-boccatta 
+    {
+        display: none;
+    }
+    .header
+    {
+        justify-content: center;
+        padding-left: 0;
+        text-align: center;
+    }
+    .header p 
+    {
+        padding-left: 0;
+        text-align: center;
+    }
+    .header button 
+    {
+        margin-left: 0;
+        text-align: center;
+    }
+    .cakes
+    {
+        
+    grid-template-columns: repeat(auto-fit, minmax(75px, 250px));
+    }
+}
+@media screen and (max-width: 630px)
+{
+    .cakes-grid
+    {
+      
+    grid-template-columns: repeat(auto-fit, minmax(75px, 150px));
+    }
 }
